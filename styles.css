@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -32,6 +38,8 @@ h6 {
 }
 
 header {
+  top: 0;
+  left: 0;
   z-index: 2;
   position: fixed;
   width: 100%;
@@ -144,10 +152,12 @@ header nav ul a {
 }
 
 .testimonials {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   flex-direction: row;
+  margin-top: 190px;
   padding: 100px 0;
 }
 
@@ -161,7 +171,6 @@ header nav ul a {
   border-radius: 10px;
   color: white;
   margin: 20px;
-  margin-top: 190px;
   transition: box-shadow 0.3s ease-in, background-color 0.3s ease-in,
     color 0.3s ease-in;
 }
@@ -177,12 +186,11 @@ header nav ul a {
 .testimonials .testimonial .cp {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.3rem;
-  padding: 30px;
+  padding: 30px 0px;
   text-align: center;
 }
 
 .testimonials .testimonial .ci {
-  display: flex;
   width: 150px;
   height: 150px;
   padding: 20px;
@@ -203,6 +211,7 @@ header nav ul a {
 
 .test-heads {
   font-family: "Red Hat Text", sans-serif;
+  text-align: center;
 }
 
 .frame-2 {
@@ -236,6 +245,10 @@ header nav ul a {
   cursor: pointer;
   border-radius: 3px;
   transition: box-shadow 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -247,9 +260,8 @@ header nav ul a {
   width: 350px;
   height: 200px;
   border-radius: 3px;
-  margin-left: 90px;
-  margin-top: 10px;
   margin-bottom: 10px;
+  border: 2px solid #fff;
 }
 
 .card p {
@@ -295,10 +307,6 @@ header nav ul a {
 .lane:hover {
   transition: box-shadow 0.3s ease-out;
   box-shadow: 0px 0px 20px 10px #dedede;
-}
-
-.lane-2 {
-  /* margin-right: 80px; */
 }
 
 .lane p {
@@ -353,17 +361,17 @@ textarea {
 }
 
 #foot-con {
-  margin-top: 88px;
+  margin-top: 73px;
 }
 
 #submit {
   color: white;
   background-color: #5fc74f;
   border-color: #5fc74f;
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
   font-size: 1.5rem;
-  box-shadow: none;
+  box-shadow: 0px 0px 20px 3px #8c8c8c;
   transition: color 0.3s ease-in, background-color 0.3s ease-in;
 }
 
@@ -371,4 +379,257 @@ textarea {
   transition: color 0.3s ease-out, background-color 0.3s ease-out;
   color: #5fc74f;
   background-color: white;
+}
+
+.contact-foot {
+  position: absolute;
+  width: 100vw;
+}
+
+.contact {
+  margin-top: 250px;
+}
+
+#contact-head {
+  text-align: center;
+  font-size: 14rem;
+  color: white;
+  font-family: "Crimson Text";
+  text-shadow: 5px 5px 25px #8c8c8c;
+}
+
+#number {
+  font-size: 2.5rem;
+  font-family: "Red Hat Text", sans-serif;
+  text-align: center;
+  text-shadow: 0px 5px 35px #8c8c8c;
+  color: white;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+}
+
+#number:hover {
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  text-shadow: 0;
+  color: #8c8c8c;
+}
+
+#rnum {
+  color: #8c8c8c;
+}
+
+@media (max-width: 1100px) {
+  #contact-head {
+    font-size: 12rem;
+  }
+
+  .main p {
+    margin: 0 350px;
+  }
+
+  .main img {
+    margin-top: 100px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .testimonials .testimonial {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .testimonial {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  #contact-head {
+    font-size: 10rem;
+  }
+
+  #number {
+    font-size: 2rem;
+  }
+
+  .main p {
+    margin: 0 150px;
+  }
+
+  .main img {
+    margin-top: 150px;
+    width: 450px;
+    height: 450px;
+  }
+
+  header nav ul li {
+    padding-right: 40px;
+    font-size: 1.2rem;
+  }
+
+  .gs {
+    font-size: 1.2rem;
+  }
+
+  .testimonials .testimonial {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 700px) {
+  #contact-head {
+    font-size: 8rem;
+  }
+
+  #number {
+    font-size: 1.8rem;
+  }
+
+  header nav ul li {
+    padding-right: 30px;
+    font-size: 1.1rem;
+  }
+  .gs {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .card img {
+    width: 350px;
+  }
+
+  .lanes {
+    margin: 50px;
+  }
+
+  .lane p {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #contact-head {
+    font-size: 6rem;
+  }
+
+  #number {
+    font-size: 1.5rem;
+  }
+
+  .main p {
+    margin: 0 50px;
+  }
+
+  .main img {
+    margin-top: 150px;
+    width: 400px;
+    height: 400px;
+  }
+
+  header nav ul {
+    margin-right: -15px;
+  }
+
+  header nav ul li {
+    font-size: 1rem;
+    padding-right: 20px;
+  }
+
+  .gs {
+    font-size: 1rem;
+    padding: 7px;
+  }
+
+  .title {
+    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  header nav ul li {
+    padding-right: 18px;
+    font-size: 0.8rem;
+  }
+
+  .gs {
+    font-size: 0.8rem;
+  }
+
+  .card img {
+    width: 200px;
+  }
+
+  .lanes {
+    margin: 20px;
+  }
+
+  .lane {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  header nav ul li {
+    padding-right: 0px;
+    margin-top: 10px;
+    margin-right: 16px;
+    font-size: 0.78rem;
+    letter-spacing: 0px;
+  }
+
+  .gs {
+    font-size: 0.78rem;
+    padding: 5px;
+  }
+
+  .title {
+    margin-top: 38px;
+    padding-bottom: 0;
+  }
+
+  .main img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .main p {
+    font-size: 1.5rem;
+  }
 }
